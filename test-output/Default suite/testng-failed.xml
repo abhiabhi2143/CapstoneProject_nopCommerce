@@ -3,12 +3,12 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="nopCommerce.tests.NopCommerceTest">
+      <class name="testCase.EndToEndLogin">
         <methods>
-          <include name="logout"/>
+          <include name="TC001_VerifyLoginCredentialValidData"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- nopCommerce.tests.NopCommerceTest -->
+      </class> <!-- testCase.EndToEndLogin -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
