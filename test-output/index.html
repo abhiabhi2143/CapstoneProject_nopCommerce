@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -39,7 +39,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-Suite" class="navigator-link">
-              <span class="suite-name border-failed">Suite</span>
+              <span class="suite-name border-passed">Suite</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -92,21 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">6 methods, 1 failed,   5 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
-                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
-                    </span>
-                    <div class="method-list-content failed suite-Suite">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testCase.EndToEndLogin" class="method navigator-link" hash-for-method="TC001_VerifyLoginCredentialValidData">TC001_VerifyLoginCredentialValidData</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-Suite -->
+                    <span class="method-stats">6 methods,   6 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -117,27 +103,32 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testCase.EndToEndCart" class="method navigator-link" hash-for-method="cartTest">cartTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="testCase.EndToEndLogin" class="method navigator-link" hash-for-method="TC001_VerifyLoginCredentialValidData">TC001_VerifyLoginCredentialValidData</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testCase.EndToEndCheckout" class="method navigator-link" hash-for-method="checkoutTest">checkoutTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="testCase.EndToEndRegister" class="method navigator-link" hash-for-method="registrationTest">registrationTest</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testCase.EndToEndRegister" class="method navigator-link" hash-for-method="regTest">regTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="testCase.EndToEndSearch" class="method navigator-link" hash-for-method="verify_Search(MacBook)">verify_Search(MacBook)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testCase.EndToEndSearch" class="method navigator-link" hash-for-method="searchTest">searchTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="testCase.EndToEndCart" class="method navigator-link" hash-for-method="verify_addToCart(MacBook)">verify_addToCart(MacBook)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="testCase.EndToEndWishlist" class="method navigator-link" hash-for-method="wishlistTest">wishlistTest</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="testCase.EndToEndCheckout" class="method navigator-link" hash-for-method="verify_checkout(yes, India, Andhra Pradesh, Rajahmundry, Mandapeta, 533308, 9988776699, Adobe Photoshop)">verify_checkout(yes, India, Andhra Pradesh, Rajahmundry, Mandapeta, 533308, 9988776699, Adobe Photoshop)</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="testCase.EndToEndWishlist" class="method navigator-link" hash-for-method="verify_wishlist(MacBook)">verify_wishlist(MacBook)</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -152,27 +143,6 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-Suite" class="panel Suite">
-          <div class="suite-Suite-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">testCase.EndToEndLogin</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="TC001_VerifyLoginCredentialValidData">
-                  </a> <!-- TC001_VerifyLoginCredentialValidData -->
-                  <span class="method-name">TC001_VerifyLoginCredentialValidData</span>
-                  <div class="stack-trace">java.lang.AssertionError: Login failed with error: Login was unsuccessful. Please correct the errors and try again.
-No customer account found
-	at testCase.EndToEndLogin.TC001_VerifyLoginCredentialValidData(EndToEndLogin.java:27)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 28 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-failed -->
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
@@ -181,9 +151,10 @@ No customer account found
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="cartTest">
-                  </a> <!-- cartTest -->
-                  <span class="method-name">cartTest</span>
+                  <a name="verify_addToCart(MacBook)">
+                  </a> <!-- verify_addToCart(MacBook) -->
+                  <span class="method-name">verify_addToCart</span>
+                  <span class="parameters">(MacBook)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -191,14 +162,14 @@ No customer account found
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">testCase.EndToEndRegister</span>
+              <span class="class-name">testCase.EndToEndLogin</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="regTest">
-                  </a> <!-- regTest -->
-                  <span class="method-name">regTest</span>
+                  <a name="TC001_VerifyLoginCredentialValidData">
+                  </a> <!-- TC001_VerifyLoginCredentialValidData -->
+                  <span class="method-name">TC001_VerifyLoginCredentialValidData</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -211,9 +182,10 @@ No customer account found
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="wishlistTest">
-                  </a> <!-- wishlistTest -->
-                  <span class="method-name">wishlistTest</span>
+                  <a name="verify_wishlist(MacBook)">
+                  </a> <!-- verify_wishlist(MacBook) -->
+                  <span class="method-name">verify_wishlist</span>
+                  <span class="parameters">(MacBook)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -226,9 +198,10 @@ No customer account found
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="checkoutTest">
-                  </a> <!-- checkoutTest -->
-                  <span class="method-name">checkoutTest</span>
+                  <a name="verify_checkout(yes, India, Andhra Pradesh, Rajahmundry, Mandapeta, 533308, 9988776699, Adobe Photoshop)">
+                  </a> <!-- verify_checkout(yes, India, Andhra Pradesh, Rajahmundry, Mandapeta, 533308, 9988776699, Adobe Photoshop) -->
+                  <span class="method-name">verify_checkout</span>
+                  <span class="parameters">(yes,India,Andhra Pradesh,Rajahmundry,Mandapeta,533308,9988776699,Adobe Photoshop)</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -241,9 +214,25 @@ No customer account found
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="searchTest">
-                  </a> <!-- searchTest -->
-                  <span class="method-name">searchTest</span>
+                  <a name="verify_Search(MacBook)">
+                  </a> <!-- verify_Search(MacBook) -->
+                  <span class="method-name">verify_Search</span>
+                  <span class="parameters">(MacBook)</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCase.EndToEndRegister</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="registrationTest">
+                  </a> <!-- registrationTest -->
+                  <span class="method-name">registrationTest</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -263,8 +252,8 @@ No customer account found
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;testCase.EndToEndLogin&quot;/&gt;
       &lt;class name=&quot;testCase.EndToEndRegister&quot;/&gt;
+      &lt;class name=&quot;testCase.EndToEndLogin&quot;/&gt;
       &lt;class name=&quot;testCase.EndToEndSearch&quot;/&gt;
       &lt;class name=&quot;testCase.EndToEndWishlist&quot;/&gt;
       &lt;class name=&quot;testCase.EndToEndCart&quot;/&gt;
@@ -310,29 +299,29 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(6);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'checkoutTest')
+data.setCell(0, 1, 'verify_checkout')
 data.setCell(0, 2, 'testCase.EndToEndCheckout')
-data.setCell(0, 3, 28846);
+data.setCell(0, 3, 40362);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'wishlistTest')
+data.setCell(1, 1, 'verify_wishlist')
 data.setCell(1, 2, 'testCase.EndToEndWishlist')
-data.setCell(1, 3, 12654);
+data.setCell(1, 3, 32740);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'cartTest')
+data.setCell(2, 1, 'verify_addToCart')
 data.setCell(2, 2, 'testCase.EndToEndCart')
-data.setCell(2, 3, 10541);
+data.setCell(2, 3, 19222);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'regTest')
-data.setCell(3, 2, 'testCase.EndToEndRegister')
-data.setCell(3, 3, 8976);
+data.setCell(3, 1, 'verify_Search')
+data.setCell(3, 2, 'testCase.EndToEndSearch')
+data.setCell(3, 3, 4652);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'searchTest')
-data.setCell(4, 2, 'testCase.EndToEndSearch')
-data.setCell(4, 3, 6854);
+data.setCell(4, 1, 'TC001_VerifyLoginCredentialValidData')
+data.setCell(4, 2, 'testCase.EndToEndLogin')
+data.setCell(4, 3, 3832);
 data.setCell(5, 0, 5)
-data.setCell(5, 1, 'TC001_VerifyLoginCredentialValidData')
-data.setCell(5, 2, 'testCase.EndToEndLogin')
-data.setCell(5, 3, 1196);
+data.setCell(5, 1, 'registrationTest')
+data.setCell(5, 2, 'testCase.EndToEndRegister')
+data.setCell(5, 3, 2755);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
@@ -363,72 +352,94 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">testCase.EndToEndLogin</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">testCase.EndToEndRegister</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">TC001_VerifyLoginCredentialValidData</span>
-                <span class="method-start">3919 ms</span>
+                <span class="method-name">registrationTest</span>
+                <span class="method-start">2383 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">5141 ms</span>
+              </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
-              <div class="chronological-class-name">testCase.EndToEndRegister</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">testCase.EndToEndLogin</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">5220 ms</span>
+                <span class="method-start">5351 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">regTest</span>
-                <span class="method-start">8784 ms</span>
+                <span class="method-name">TC001_VerifyLoginCredentialValidData</span>
+                <span class="method-start">7075 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">10910 ms</span>
+              </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testCase.EndToEndSearch</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">17764 ms</span>
+                <span class="method-start">11124 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">searchTest</span>
-                <span class="method-start">21486 ms</span>
+                <span class="method-name">verify_Search(MacBook)</span>
+                <span class="method-start">13715 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">18369 ms</span>
+              </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testCase.EndToEndWishlist</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">28343 ms</span>
+                <span class="method-start">18556 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">wishlistTest</span>
-                <span class="method-start">33636 ms</span>
+                <span class="method-name">verify_wishlist(MacBook)</span>
+                <span class="method-start">20168 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">52910 ms</span>
+              </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testCase.EndToEndCart</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">46291 ms</span>
+                <span class="method-start">53124 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">cartTest</span>
-                <span class="method-start">49941 ms</span>
+                <span class="method-name">verify_addToCart(MacBook)</span>
+                <span class="method-start">55805 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">75029 ms</span>
+              </div> <!-- configuration-class after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">testCase.EndToEndCheckout</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">setUp</span>
-                <span class="method-start">60484 ms</span>
+                <span class="method-start">75240 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">checkoutTest</span>
-                <span class="method-start">63990 ms</span>
+                <span class="method-name">verify_checkout(yes, India, Andhra Pradesh, Rajahmundry, Mandapeta, 533308, 9988776699, Adobe Photoshop)</span>
+                <span class="method-start">77929 ms</span>
               </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">tearDown</span>
+                <span class="method-start">118292 ms</span>
+              </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
       </div> <!-- main-panel-root -->

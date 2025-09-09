@@ -1,111 +1,157 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="6" passed="5" failed="1" skipped="0">
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-07T12:48:39 IST" name="Suite" finished-at="2025-09-07T12:50:12 IST" duration-ms="93065">
+  <suite started-at="2025-09-08T14:54:23 IST" name="Suite" finished-at="2025-09-08T14:56:22 IST" duration-ms="118714">
     <groups>
     </groups>
-    <test started-at="2025-09-07T12:48:39 IST" name="Test" finished-at="2025-09-07T12:50:12 IST" duration-ms="93065">
+    <test started-at="2025-09-08T14:54:23 IST" name="Test" finished-at="2025-09-08T14:56:22 IST" duration-ms="118714">
       <class name="testCase.EndToEndSearch">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testCase.EndToEndSearch@544fa968]" started-at="2025-09-07T12:48:57 IST" name="setUp" finished-at="2025-09-07T12:49:00 IST" duration-ms="3722" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testCase.EndToEndSearch@77f1baf5]" started-at="2025-09-08T14:54:35 IST" name="setUp" finished-at="2025-09-08T14:54:36 IST" duration-ms="1784" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="searchTest()[pri:0, instance:testCase.EndToEndSearch@544fa968]" started-at="2025-09-07T12:49:00 IST" name="searchTest" finished-at="2025-09-07T12:49:07 IST" duration-ms="6854" status="PASS">
+        <test-method signature="verify_Search(java.lang.String)[pri:0, instance:testCase.EndToEndSearch@77f1baf5]" started-at="2025-09-08T14:54:37 IST" name="verify_Search" data-provider="SearchData" finished-at="2025-09-08T14:54:42 IST" duration-ms="4652" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[MacBook]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- searchTest -->
+        </test-method> <!-- verify_Search -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCase.EndToEndSearch@77f1baf5]" started-at="2025-09-08T14:54:42 IST" name="tearDown" finished-at="2025-09-08T14:54:42 IST" duration-ms="187" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
       </class> <!-- testCase.EndToEndSearch -->
       <class name="testCase.EndToEndWishlist">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testCase.EndToEndWishlist@247bddad]" started-at="2025-09-07T12:49:07 IST" name="setUp" finished-at="2025-09-07T12:49:12 IST" duration-ms="5291" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testCase.EndToEndWishlist@41a2befb]" started-at="2025-09-08T14:54:42 IST" name="setUp" finished-at="2025-09-08T14:54:44 IST" duration-ms="1558" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="wishlistTest()[pri:0, instance:testCase.EndToEndWishlist@247bddad]" started-at="2025-09-07T12:49:12 IST" name="wishlistTest" finished-at="2025-09-07T12:49:25 IST" duration-ms="12654" status="PASS">
+        <test-method signature="verify_wishlist(java.lang.String)[pri:0, instance:testCase.EndToEndWishlist@41a2befb]" started-at="2025-09-08T14:54:44 IST" name="verify_wishlist" data-provider="SearchData" finished-at="2025-09-08T14:55:16 IST" duration-ms="32740" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[MacBook]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- wishlistTest -->
+        </test-method> <!-- verify_wishlist -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCase.EndToEndWishlist@41a2befb]" started-at="2025-09-08T14:55:16 IST" name="tearDown" finished-at="2025-09-08T14:55:17 IST" duration-ms="214" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
       </class> <!-- testCase.EndToEndWishlist -->
       <class name="testCase.EndToEndCart">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testCase.EndToEndCart@d35dea7]" started-at="2025-09-07T12:49:25 IST" name="setUp" finished-at="2025-09-07T12:49:29 IST" duration-ms="3649" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testCase.EndToEndCart@6c40365c]" started-at="2025-09-08T14:55:17 IST" name="setUp" finished-at="2025-09-08T14:55:19 IST" duration-ms="2643" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="cartTest()[pri:0, instance:testCase.EndToEndCart@d35dea7]" started-at="2025-09-07T12:49:29 IST" name="cartTest" finished-at="2025-09-07T12:49:39 IST" duration-ms="10541" status="PASS">
+        <test-method signature="verify_addToCart(java.lang.String)[pri:0, instance:testCase.EndToEndCart@6c40365c]" started-at="2025-09-08T14:55:19 IST" name="verify_addToCart" data-provider="SearchData" finished-at="2025-09-08T14:55:38 IST" duration-ms="19222" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[MacBook]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- cartTest -->
+        </test-method> <!-- verify_addToCart -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCase.EndToEndCart@6c40365c]" started-at="2025-09-08T14:55:38 IST" name="tearDown" finished-at="2025-09-08T14:55:39 IST" duration-ms="211" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
       </class> <!-- testCase.EndToEndCart -->
       <class name="testCase.EndToEndLogin">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testCase.EndToEndLogin@7817fd62]" started-at="2025-09-07T12:48:39 IST" name="setUp" finished-at="2025-09-07T12:48:43 IST" duration-ms="3912" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testCase.EndToEndLogin@7d20d0b]" started-at="2025-09-08T14:54:29 IST" name="setUp" finished-at="2025-09-08T14:54:31 IST" duration-ms="1722" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="TC001_VerifyLoginCredentialValidData()[pri:1, instance:testCase.EndToEndLogin@7817fd62]" started-at="2025-09-07T12:48:43 IST" name="TC001_VerifyLoginCredentialValidData" finished-at="2025-09-07T12:48:44 IST" duration-ms="1196" status="FAIL">
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[Login failed with error: Login was unsuccessful. Please correct the errors and try again.
-No customer account found]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: Login failed with error: Login was unsuccessful. Please correct the errors and try again.
-No customer account found
-at org.testng.Assert.fail(Assert.java:111)
-at testCase.EndToEndLogin.TC001_VerifyLoginCredentialValidData(EndToEndLogin.java:27)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:141)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:687)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:230)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:63)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:995)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:203)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:154)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:134)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-at org.testng.TestRunner.privateRun(TestRunner.java:741)
-at org.testng.TestRunner.run(TestRunner.java:616)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:421)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:413)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:373)
-at org.testng.SuiteRunner.run(SuiteRunner.java:312)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1274)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1208)
-at org.testng.TestNG.runSuites(TestNG.java:1112)
-at org.testng.TestNG.run(TestNG.java:1079)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
+        <test-method signature="TC001_VerifyLoginCredentialValidData()[pri:0, instance:testCase.EndToEndLogin@7d20d0b]" started-at="2025-09-08T14:54:31 IST" name="TC001_VerifyLoginCredentialValidData" finished-at="2025-09-08T14:54:34 IST" depends-on-methods="testCase.EndToEndRegister.registrationTest" duration-ms="3832" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC001_VerifyLoginCredentialValidData -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCase.EndToEndLogin@7d20d0b]" started-at="2025-09-08T14:54:34 IST" name="tearDown" finished-at="2025-09-08T14:54:35 IST" duration-ms="213" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
       </class> <!-- testCase.EndToEndLogin -->
       <class name="testCase.EndToEndRegister">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testCase.EndToEndRegister@3bd82cf5]" started-at="2025-09-07T12:48:44 IST" name="setUp" finished-at="2025-09-07T12:48:48 IST" duration-ms="3563" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testCase.EndToEndRegister@544fa968]" started-at="2025-09-08T14:54:23 IST" name="setUp" finished-at="2025-09-08T14:54:26 IST" duration-ms="2375" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="regTest()[pri:0, instance:testCase.EndToEndRegister@3bd82cf5]" started-at="2025-09-07T12:48:48 IST" name="regTest" finished-at="2025-09-07T12:48:57 IST" duration-ms="8976" status="PASS">
+        <test-method signature="registrationTest()[pri:1, instance:testCase.EndToEndRegister@544fa968]" started-at="2025-09-08T14:54:26 IST" name="registrationTest" finished-at="2025-09-08T14:54:29 IST" duration-ms="2755" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- regTest -->
+        </test-method> <!-- registrationTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCase.EndToEndRegister@544fa968]" started-at="2025-09-08T14:54:29 IST" name="tearDown" finished-at="2025-09-08T14:54:29 IST" duration-ms="209" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
       </class> <!-- testCase.EndToEndRegister -->
       <class name="testCase.EndToEndCheckout">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testCase.EndToEndCheckout@7770f470]" started-at="2025-09-07T12:49:39 IST" name="setUp" finished-at="2025-09-07T12:49:43 IST" duration-ms="3505" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testCase.EndToEndCheckout@7bedc48a]" started-at="2025-09-08T14:55:39 IST" name="setUp" finished-at="2025-09-08T14:55:41 IST" duration-ms="2388" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="checkoutTest()[pri:0, instance:testCase.EndToEndCheckout@7770f470]" started-at="2025-09-07T12:49:43 IST" name="checkoutTest" finished-at="2025-09-07T12:50:12 IST" duration-ms="28846" status="PASS">
+        <test-method signature="verify_checkout(java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:testCase.EndToEndCheckout@7bedc48a]" started-at="2025-09-08T14:55:41 IST" name="verify_checkout" data-provider="CheckoutData" finished-at="2025-09-08T14:56:22 IST" duration-ms="40362" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[yes]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[India]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Andhra Pradesh]]>
+              </value>
+            </param>
+            <param index="3">
+              <value>
+                <![CDATA[Rajahmundry]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[Mandapeta]]>
+              </value>
+            </param>
+            <param index="5">
+              <value>
+                <![CDATA[533308]]>
+              </value>
+            </param>
+            <param index="6">
+              <value>
+                <![CDATA[9988776699]]>
+              </value>
+            </param>
+            <param index="7">
+              <value>
+                <![CDATA[Adobe Photoshop]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- checkoutTest -->
+        </test-method> <!-- verify_checkout -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCase.EndToEndCheckout@7bedc48a]" started-at="2025-09-08T14:56:22 IST" name="tearDown" finished-at="2025-09-08T14:56:22 IST" duration-ms="204" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
       </class> <!-- testCase.EndToEndCheckout -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->

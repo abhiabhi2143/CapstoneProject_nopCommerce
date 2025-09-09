@@ -6,29 +6,44 @@ import org.testng.annotations.Test;
 import pageObjects.HomePage;
 import pageObjects.LoginPage;
 import testBase.BaseClass;
-import utilities.DataProviders;
 
 public class EndToEndLogin extends BaseClass {
-	@Test(priority = 1)
-	public void TC001_VerifyLoginCredentialValidData() {
-
-		//System.out.println("Trying login with: " + email + " / " + password);
-		HomePage hp = new HomePage(driver);
-		hp.selectLogin();
-
-		LoginPage lp = new LoginPage(driver);
-		lp.setEmail("ram001@gmail.com");
-		lp.setPassword("ram1234");
-		lp.loginSubmit();
-
-		// inside your test method, after lp.clickLoginSubmitBtn();
-		String err = lp.getLoginErrorMessage(); // implement this in LoginPage if not present
-		if (err != null && err.trim().length() > 0) {
-			Assert.fail("Login failed with error: " + err);
-		}
-
-		// or explicit check for expected text
-		// Assert.assertFalse(err.contains("Login was unsuccessful"), "Login failed: " +
-		// err);
+	
+	@Test(dependsOnMethods = {"testCase.EndToEndRegister.registrationTest"})
+	public void TC001_VerifyLoginCredentialValidData() 
+	{
+		try {
+			
+			HomePage hp = new HomePage(driver);
+	        hp.selectLogin();
+	        
+	        
+	        LoginPage lp = new LoginPage(driver);
+	     // read saved credentials from TS001
+	        String email = EndToEndRegister.registeredEmail;
+	        String password = EndToEndRegister.registeredPassword;
+	        
+	        // fail fast with clear message if credentials are missing
+	        if (email == null || email.trim().isEmpty()) {
+	            Assert.fail("Login aborted: registeredEmail is null/empty. Ensure registrationTest ran and stored credentials.");
+	        }
+	        if (password == null || password.trim().isEmpty()) {
+	            Assert.fail("Login aborted: registeredPassword is null/empty. Ensure registrationTest ran and stored credentials.");
+	        }
+	       
+	        lp.setLoginEmail(EndToEndRegister.registeredEmail);     // reuse saved email
+	        lp.setLoginPassword(EndToEndRegister.registeredPassword); // reuse saved password
+	        lp.clickLoginSubmitBtn();
+	
+	        Assert.assertTrue(lp.isLogoutDisplayed(),
+	                "Login failed for user: " + EndToEndRegister.registeredEmail);
+	
+	        hp.selectLogout();
+	    } 
+		catch (Exception e) 
+		{
+	        Assert.fail("Exception in login test: " + e.getMessage());
+	    }
+	
 	}
 }

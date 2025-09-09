@@ -6,12 +6,13 @@
   </listeners>
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="testCase.EndToEndLogin">
+      <class name="testCase.EndToEndCheckout">
         <methods>
-          <include name="TC001_VerifyLoginCredentialValidData"/>
+          <include name="tearDown"/>
+          <include name="verify_checkout" invocation-numbers="0"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- testCase.EndToEndLogin -->
+      </class> <!-- testCase.EndToEndCheckout -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

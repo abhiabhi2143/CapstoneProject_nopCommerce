@@ -17,7 +17,8 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
 import testBase.BaseClass;
-public class ExtentReportManager implements ITestListener{
+public class ExtentReportManager implements ITestListener
+{
 
 	 private ExtentSparkReporter sparkReporter;
 	    private ExtentReports extent;
@@ -25,7 +26,8 @@ public class ExtentReportManager implements ITestListener{
 	    private String repName;
 
 	    @Override
-	    public void onStart(ITestContext testContext) {
+	    public void onStart(ITestContext testContext) 
+	    {
 	        String timeStamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
 	        repName = "Test-Report_" + timeStamp + ".html";
 
@@ -58,7 +60,8 @@ public class ExtentReportManager implements ITestListener{
 	    }
 
 	    @Override
-	    public void onTestStart(ITestResult result) {
+	    public void onTestStart(ITestResult result) 
+	    {
 	        // Use method name and optionally description or a custom annotation value (TC id) here
 	        String testName = result.getMethod().getMethodName();
 	        String description = result.getMethod().getDescription();
@@ -75,55 +78,69 @@ public class ExtentReportManager implements ITestListener{
 	    }
 
 	    @Override
-	    public void onTestSuccess(ITestResult result) {
+	    public void onTestSuccess(ITestResult result) 
+	    {
 	        tlTest.get().log(Status.PASS, result.getMethod().getMethodName() + " - Passed");
 	    }
 
 	    @Override
-	    public void onTestFailure(ITestResult result) {
+	    public void onTestFailure(ITestResult result) 
+	    {
 	        tlTest.get().log(Status.FAIL, result.getMethod().getMethodName() + " - Failed");
 	        tlTest.get().log(Status.FAIL, "Reason: " + result.getThrowable());
 
 	        // Capture screenshot from the actual test instance's driver
-	        try {
+	        try 
+	        {
 	            Object instance = result.getInstance();
-	            if (instance instanceof BaseClass) {
+	            if (instance instanceof BaseClass) 
+	            {
 	                BaseClass base = (BaseClass) instance;
 	                String imgPath = base.captureScreen(result.getMethod().getMethodName());
-	                if (imgPath != null) {
+	                if (imgPath != null) 
+	                {
 	                    tlTest.get().addScreenCaptureFromPath(imgPath);
-	                } else {
+	                } 
+	                else 
+	                {
 	                    tlTest.get().warning("Screenshot path is null");
 	                }
-	            } else {
+	            } 
+	            else 
+	            {
 	                tlTest.get().warning("Test instance is not of type BaseClass - cannot capture screenshot.");
 	            }
-	        } catch (Exception e) {
+	        } 
+	        catch (Exception e) 
+	        {
 	            tlTest.get().warning("Exception while taking screenshot: " + e.getMessage());
 	        }
 	    }
 
 	    @Override
-	    public void onTestSkipped(ITestResult result) {
+	    public void onTestSkipped(ITestResult result) 
+	    {
 	        tlTest.get().log(Status.SKIP, result.getMethod().getMethodName() + " - Skipped");
-	        if (result.getThrowable() != null) {
+	        if (result.getThrowable() != null) 
+	        {
 	            tlTest.get().log(Status.SKIP, "Skip reason: " + result.getThrowable());
 	        }
 	    }
 
 	    @Override
-	    public void onFinish(ITestContext testContext) {
+	    public void onFinish(ITestContext testContext) 
+	    {
 	        extent.flush();
 
 	        // Open report automatically
 	        String extentReportPath = System.getProperty("user.dir") + File.separator + "reports" + File.separator + repName;
-	        try {
+	        try 
+	        {
 	            Desktop.getDesktop().browse(new File(extentReportPath).toURI());
-	        } catch (IOException e) {
+	        } 
+	        catch (IOException e) 
+	        {
 	            e.printStackTrace();
 	        }
 	    }
 }
-
-	    // Other ITestListener methods (no-op)
-	    // onTestFailedButWithinSuccessPercentage / onTestFailedWithTimeout not needed explicitly}

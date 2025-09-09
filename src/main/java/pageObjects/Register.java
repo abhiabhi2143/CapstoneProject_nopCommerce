@@ -1,113 +1,129 @@
 package pageObjects;
 
+import java.time.Duration;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class Register extends BasePage{
 
-	//constructor
 	public Register(WebDriver driver) {
 		super(driver);
 		// TODO Auto-generated constructor stub
 	}
 	
-	//locators
-	@FindBy(linkText="Register")
-	WebElement ClickOnRegister;
+	//locators for test case 1 -->pass
+	
 	
 	@FindBy(xpath="//input[@id='gender-male']")
-	WebElement MaleRad;
+	WebElement MaleRadioBtn;
 	
 	@FindBy(xpath="//input[@id='gender-female']")
-	WebElement FemaleRad;
+	WebElement FemaleRadioBtn;
 	
-	@FindBy(xpath="//input[@id='FirstName']")
+	@FindBy(xpath = "//input[@id='FirstName']")
 	WebElement FirstNameTxtBox;
 	
-	@FindBy(xpath="//input[@id='LastName']")
+	@FindBy(xpath = "//input[@id='LastName']")
 	WebElement LastNameTxtBox;
 	
 	@FindBy(xpath="//input[@id='Email']")
 	WebElement EmailTxtBox;
 	
+	@FindBy(xpath = "//input[@id='Company']")
+	WebElement CompanyNameTxtBox;
+	
 	@FindBy(xpath="//input[@id='Password']")
-	WebElement PassTxtBox;
+	WebElement PasswordTxtBox;
 	
 	@FindBy(xpath="//input[@id='ConfirmPassword']")
-	WebElement PassConfirmTxtBox;
+	WebElement ConfirmPasswordTxtBox;
 	
-	@FindBy(id="register-button")
-	WebElement RegisterSubmit;
+	@FindBy(xpath="//button[@id='register-button']")
+	WebElement submitBtn;
 	
-	@FindBy(linkText="Log out")
-	WebElement ClickOnLogout;
+	// success message after registration
+	@FindBy(xpath="//div[@class='result']")
+	WebElement RegSuccessfullMsgDeisplayed;
 	
-	//action methods
-	public void clickOnRegister() throws InterruptedException
-	{
-		Thread.sleep(3000);
-		ClickOnRegister.click();
-	}
+	@FindBy(xpath = "//li[normalize-space()='The specified email already exists']")
+	private WebElement emailExistsError;
+
+
 	
+	//Action Methods
 	
-	public void selectGender(String gender) 
-	{
-	    if (gender.equalsIgnoreCase("male")) 
-	    {
-	        MaleRad.click();
-	    } 
-	    else if (gender.equalsIgnoreCase("female")) 
-	    {
-	        FemaleRad.click();
-	    } 
-	    else 
-	    {
+	public void selectGender(String gender) {
+	    if (gender.equalsIgnoreCase("male")) {
+	        MaleRadioBtn.click();
+	    } else if (gender.equalsIgnoreCase("female")) {
+	        FemaleRadioBtn.click();
+	    } else {
 	        throw new IllegalArgumentException("Invalid gender: " + gender);
 	    }
 	}
-	public void setFirstName(String fname) 
-	{
-	     FirstNameTxtBox.clear();
-	     FirstNameTxtBox.sendKeys(fname);
-	}
+	 public void setFirstName(String fname) {
+	        FirstNameTxtBox.clear();
+	        FirstNameTxtBox.sendKeys(fname);
+	    }
 
-	public void setLastName(String lname) 
-	{
-	     LastNameTxtBox.clear();
-	     LastNameTxtBox.sendKeys(lname);
-	}
+	    public void setLastName(String lname) {
+	        LastNameTxtBox.clear();
+	        LastNameTxtBox.sendKeys(lname);
+	    }
 
-	public void setEmail(String email) 
-	{
-		 EmailTxtBox.clear();
-	     EmailTxtBox.sendKeys(email);
-	}
+	    public void setEmail(String email) {
+	        EmailTxtBox.clear();
+	        EmailTxtBox.sendKeys(email);
+	    }
 
+	    public void setCompanyName(String company) {
+	        CompanyNameTxtBox.clear();
+	        CompanyNameTxtBox.sendKeys(company);
+	    }
 
-	public void setPassword(String pwd) 
-	{
-	     PassTxtBox.clear();
-	     PassTxtBox.sendKeys(pwd);
-	}
+	    public void setPassword(String pwd) {
+	        PasswordTxtBox.clear();
+	        PasswordTxtBox.sendKeys(pwd);
+	    }
 
-	public void setConfirmPassword(String cpwd) 
-	{
-	     PassConfirmTxtBox.clear();
-	     PassConfirmTxtBox.sendKeys(cpwd);
-	}
-	
-	public void clickOnRegisterSubmit()
-	{
-		RegisterSubmit.click();
-	}
-	
-	
-	public void clickOnLogout() throws InterruptedException 
-	{
-		Thread.sleep(3000);
-		ClickOnLogout.click();
-	}
+	    public void setConfirmPassword(String cpwd) {
+	        ConfirmPasswordTxtBox.clear();
+	        ConfirmPasswordTxtBox.sendKeys(cpwd);
+	    }
 
-	
-}
+	    public void clickSubmit() {
+	    	submitBtn.click();
+	    }
+	    public boolean isRegistrationSuccessMessageDisplayed() {
+	    	return RegSuccessfullMsgDeisplayed.isDisplayed();
+	    }
+	    
+	    // method to detect success message 
+	    public boolean isRegistrationSuccessMessageDisplayedforFailedTestCase() {
+	        try {
+	            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(8));
+	            wait.until(ExpectedConditions.visibilityOf(RegSuccessfullMsgDeisplayed));
+	            return RegSuccessfullMsgDeisplayed.isDisplayed();
+	        } catch (Exception e) {
+	            return false;
+	        }
+	    }
+	    
+	 // method to detect the specific email-exists error
+	    public boolean isEmailAlreadyExistsErrorDisplayed() {
+	        try {
+	            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(8));
+	            wait.until(ExpectedConditions.visibilityOf(emailExistsError));
+	            return emailExistsError.isDisplayed();
+	        } catch (Exception e) {
+	            return false;
+	        }
+	    }
+
+	   
+
+	}

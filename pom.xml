@@ -132,7 +132,7 @@
             <version>3.2.5</version>
             <configuration>
                 <suiteXmlFiles>
-                    <suiteXmlFile>jenkins1to9.xml</suiteXmlFile>
+                    <suiteXmlFile>testng.xml</suiteXmlFile>
                 </suiteXmlFiles>
             </configuration>
         </plugin>

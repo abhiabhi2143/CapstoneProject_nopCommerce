@@ -6,52 +6,53 @@ import org.openqa.selenium.support.FindBy;
 
 public class LoginPage extends BasePage{
 
-	//constructor
-	public LoginPage(WebDriver driver){
+	public LoginPage(WebDriver driver) {
 		super(driver);
 		// TODO Auto-generated constructor stub
 	}
 	
-	//locators
+	//Locators for login
 	
-	@FindBy(xpath="//input[@id='Email']")
-	WebElement EmailTxtBox;
+	@FindBy(xpath = "//input[@id='Email']")
+	WebElement LoginEmailTxtBox;
 	
-	@FindBy(xpath="//input[@id='Password']")
-	WebElement PasswordTxtBox;
+	@FindBy(xpath = "//input[@id='Password']")
+	WebElement LoginPassWordTxtBox;
 	
-	@FindBy(xpath="//button[@class='button-1 login-button']")
-	WebElement ClickOnLoginSubmit;
+	@FindBy(xpath="//button[normalize-space()='Log in']")
+	WebElement LoginSubmitBtn;
 	
 	@FindBy(xpath="//div[@class='message-error validation-summary-errors']")
 	WebElement loginUnsuccessfulErrorMsg;
 	
-	//action methods
+	@FindBy(xpath="//a[normalize-space()='Log out']")
+	WebElement logOutbtn;
 	
-	public void setEmail(String email) {
-        EmailTxtBox.clear();
-        EmailTxtBox.sendKeys(email);
-    }
 	
-	public void setPassword(String pwd) {
-        PasswordTxtBox.clear();
-        PasswordTxtBox.sendKeys(pwd);
-    }
+	//Action methods
 	
-	public void loginSubmit()
-	{
-		ClickOnLoginSubmit.click();
+	public void setLoginEmail(String email) {
+		LoginEmailTxtBox.sendKeys(email);
 	}
 	
+	public void setLoginPassword(String password) {
+		LoginPassWordTxtBox.sendKeys(password);
+	}
+	public void clickLoginSubmitBtn() {
+		LoginSubmitBtn.click();
+	}
 	public String getLoginErrorMessage() {
-	    try {
+	    try 
+	    {
 	       // adjust selector
 	        return loginUnsuccessfulErrorMsg.getText();
-	    }
-	    catch(Exception e)
+	    } 
+	    catch(Exception e) 
 	    {
-	    	return "";
+	        return "";
 	    }
 	}
-	
+	public boolean isLogoutDisplayed() {
+		return logOutbtn.isDisplayed();
+	}
 }

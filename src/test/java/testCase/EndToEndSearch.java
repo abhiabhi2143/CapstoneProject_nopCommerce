@@ -1,32 +1,53 @@
 package testCase;
 
+import java.util.Map;
+
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import pageObjects.HomePage;
+import pageObjects.Register;
 import pageObjects.Search;
 import testBase.BaseClass;
 
-public class EndToEndSearch extends BaseClass{
-	
-	@Test
-	public void searchTest() throws InterruptedException
-	{
-		Search s=new Search(driver);
-		s.clickOnRegister();
-		s.selectGender("male");
-		s.setFirstName("Abhi");
-		s.setLastName("Ram");
-		s.setEmail("ramuafjfkgvjafj@gmail.com");
-		s.setPassword("ram1234");
-		s.setConfirmPassword("ram1234");
-		s.clickOnRegisterSubmit();
-		s.clickOnLogin();
-		s.setEmail("ramuafjfkgvjafj@gmail.com");
-		s.setPassword("ram1234");
-		s.clickOnLoginSubmitButton();
-		s.search("Apple");
-		s.clickOnSearch();
-		s.sortByHighToLow();
-		s.verifyNoOfProducts();
+public class EndToEndSearch extends BaseClass {
+	@Test(dataProvider = "SearchData", dataProviderClass = utilities.DataProviders.class)
+	public void verify_Search(String productName) throws Exception {
+		try 
+		{
+			HomePage hp = new HomePage(driver);
+			hp.selectRegister();
+			
+			Register accpage = new Register(driver);
+			Map<String, String> userData = generateRegistrationData();
+			accpage.selectGender(userData.get("gender"));
+			accpage.setFirstName(userData.get("firstName"));
+			accpage.selectGender(userData.get("gender"));
+			accpage.setFirstName(userData.get("firstName"));
+			accpage.setLastName(userData.get("lastName"));
+			accpage.setEmail(userData.get("email"));
+			accpage.setCompanyName(userData.get("companyName"));
+			accpage.setPassword(userData.get("password"));
+			accpage.setConfirmPassword(userData.get("password"));
+			accpage.clickSubmit();
+
+			Assert.assertTrue(accpage.isRegistrationSuccessMessageDisplayed(),
+					"Registration failed for: " + userData.get("email"));
+
+			// hp.selectLogout();
+
+			Search searchProduct = new Search(driver);
+			searchProduct.setsearchTxtBox(productName);//mac
+			searchProduct.clicksearchBtn();
+			searchProduct.verifyNoOfProducts();
+			searchProduct.sortByHighToLow();
+
+			hp.selectLogout();
+		} 
+		catch (Exception e) 
+		{
+			Assert.fail("Exception in registration: " + e.getMessage());
+		}
+
 	}
-	
 }

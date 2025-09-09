@@ -7,8 +7,9 @@
 
   <test thread-count="5" name="Test">
     <classes>
-      <class name="testCase.EndToEndLogin"/>
+    	
       <class name="testCase.EndToEndRegister"/>
+      <class name="testCase.EndToEndLogin"/>
       <class name="testCase.EndToEndSearch"/>
       <class name="testCase.EndToEndWishlist"/>
       <class name="testCase.EndToEndCart"/>

@@ -1,5 +1,4 @@
 package pageObjects;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -10,23 +9,30 @@ public class HomePage extends BasePage{
 		super(driver);
 		// TODO Auto-generated constructor stub
 	}
-
-	//locate elements
-	@FindBy(xpath = "//a[normalize-space()='Register']")
+	
+	//locator for registration
+	@FindBy(xpath = "//a[@class='ico-register']")
 	WebElement Registelnk;
 	
+	//locator for registration
+	@FindBy(xpath="//a[normalize-space()='Log out']")
+	WebElement logoutLnk;
+	
+	//locator for log in
 	@FindBy(xpath="//a[normalize-space()='Log in']")
-	WebElement Loginlnk;
+	WebElement logInLnk;
 	
-	
-	//Action methods
+	//Action method
 	public void selectRegister() {
 		Registelnk.click();
 	}
 	
-	public void selectLogin()
-	{
-		Loginlnk.click();
+	public void selectLogout() {
+		logoutLnk.click();
+	}
+	
+	public void selectLogin() {
+		logInLnk.click();
 	}
 	
 }
